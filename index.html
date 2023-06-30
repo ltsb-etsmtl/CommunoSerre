@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial">
+  <title>Calculateur d'emissions CO2</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+  <main>
+    <section class="glass">
+      <div class="panneau-icones">
+        <div class="icone">
+          <img src="./images/co2.png" width="60" />
+        </div>
+        <div class="icone">
+          <img src="./images/plug.png" width="60" />
+        </div>
+        <div class="icone">
+          <img src="./images/temperature.png" width="60" />
+        </div>
+        <div class="icone">
+          <img src="./images/greenhouse.png" width="60" />
+        </div>
+        <div class="icone">
+          <img src="./images/farmer1.png" width="40" />
+          <img src="./images/farmer2.png" width="40" />
+        </div>
+
+      </div>
+      <div class="container-fluid">
+        <div class="title-class">
+          <h2>Calculateur d'émissions CO<sub>2</sub> équivalentes pour une serre au Québec</h2>
+        </div>
+        <div class="tab-content">
+          <div class="tabs__tab active" id="tab_1" data-tab-info="">
+
+            <!------------ bloc 1    -->
+            <div id="bloc_1" class="block-full align-self-stretch">
+              <div class="bloc-input-1">
+                <p>Consommation électrique annuelle </p>
+                <input type="number" id="consoelec" name="consoelec" min="1" max="100000" step="0.01"> kWh
+              </div>
+
+              <div class="bloc-input-1-2">
+                <p>Cochez la case si vous possédez un chauffage</p>
+                <label class="switch">
+                  <input type="checkbox" name="checkbox_1" id="checkbox_1">
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+            
+            <!------------ bloc 2   -->
+            <div id="bloc_2" class="block-full align-self-stretch" hidden="hidden">
+              <div class="bloc-input-2">
+                <p>Type de chauffage utilisé :</p>
+                <div class="input-in-block">
+                  <label class="switch"> <input type="checkbox" id="check_2_1" name="checkbox_2_1"> <span
+                    class="slider"></span></label>Électrique
+                </div>
+                <div class="input-in-block">
+                  <label class="switch"> <input type="checkbox" id="check_2_2" name="checkbox_2_2"> <span
+                    class="slider"></span></label>Gaz
+                </div>
+                <div class="input-in-block">
+                  <label class="switch"> <input type="checkbox" id="check_2_3" name="checkbox_2_3"> <span
+                    class="slider"></span></label>Mazout
+                </div>
+              </div>
+            </div>
+            
+            <!------------ bloc 3    -->
+            <div id="bloc_3" class="block-full align-self-stretch" hidden="hidden">
+              <div class="bloc-input-3">
+                <p>Consommation annuelle de gaz </p>
+                <input type="number" id="consogaz" name="consogaz" min="0" max="100000"> m<sup>3</sup>
+              </div>
+            </div>
+
+            <!------------ bloc 4    -->
+            <div id="bloc_4" class="block-full align-self-stretch" hidden="hidden">
+              <div class="bloc-input-4">
+                <p>Consommation annuelle de mazout/fioul</p>
+                <input type="number" id="consomazout" name="consomazout" min="10" max="100000"> l
+              </div>
+            </div>
+
+          </div>
+          <div class="tabs__tab" id="tab_2" data-tab-info="">
+            <!------------ bloc 6    -->
+            <div id="bloc_6" class="block-full align-self-stretch">
+              <div class="bloc-input-6">
+                <p>Superficie de la serre</p>
+                <input type="number" id="superficieserre" name="superficieserre" min="10" max="100000" step="0.01"> m²
+              </div>
+            </div>
+            <!------------ bloc 7    -->
+
+            <!------------ bloc 8    -->
+            <div id="bloc_8" class="block-full align-self-stretch">
+              <div class="bloc-input-8">
+                <p>De quels matériaux est constitué le toit de votre serre ? </p>
+                <div class="input-in-block">
+                  <label class=" switch"> <input type="radio" id="check_8_1" name="checkbox_8" value="1">
+                    <span class="slider"></span></label>Verre
+                </div>
+                <div class="input-in-block">
+                  <label class="switch"> <input type="radio" id="check_8_2" name="checkbox_8" value="2"> <span
+                    class="slider"></span></label>PVC
+                </div>
+                <div class="input-in-block">
+                  <label class="switch"> <input type="radio" id="check_8_3" name="checkbox_8" value="3"> <span
+                    class="slider"></span></label>Bache
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="tabs__tab" id="tab_3" data-tab-info="">
+            <!------------ bloc 10    -->
+            <div id="bloc_10" class="block-full align-self-stretch">
+              <div class="bloc-input-10">
+                <p>
+                  Combien de personnes s'occupent-elles de votre serre ?
+                </p>
+                <input type="number" id="personneserre" name="personneserre" min="0" max="100000" step="1"> personne(s)
+              </div>
+              
+            </div>
+            
+            <!------------ bloc 11    -->
+            <div id="bloc_11" class="block-full align-self-stretch" hidden="hidden">
+              <div class="bloc-input-11">
+                <p>Combien d'entre elles prennent la voiture ?</p>
+                <input type="number" id="personnevoiture" name="personnevoiture" min="0" max="100000" step="1"> personne(s)
+              </div>
+            </div>
+            
+            <!------------ bloc 12    -->
+            <div id="bloc_12" class="block-full align-self-stretch" hidden="hidden">
+              <div class="bloc-input-12">
+                <p>Quelle est la distance moyenne parcourue ?</p>
+                <input type="number" id="distanceserre" name="distanceserre" min="0" max="100000" step="0.01"> Km
+              </div>
+            </div>
+            <!------------ bloc 13    -->
+            <div id="bloc_13" class="block-full align-self-stretch" hidden="hidden">
+              <div class="bloc-input-13">
+                <p>Combien de fois par mois ces personnes se rendent-elles à la serre ?</p>
+                <input type="number" id="nombretrajet" name="nombretrajet" min="1" max="100000" step="1"> fois
+              </div>
+            </div>
+          </div>
+          <!------------ Calcul chauffage (bloc 5)    -->
+          
+          <!------------ bloc 5    -->
+          <div class="resultat-calculs" hidden="hidden">
+            <div id="bloc_5" class="result-full align-self-stretch" hidden="hidden">
+              <p><span style="color:red">Chauffage : </span>Votre serre émet <span id="result" class="affichage-resultat"></span> de CO<sub>2</sub> équivalent par an. </p>
+            </div>
+            
+            <!------------ bloc 9    -->
+            <div id="bloc_9" class="result-full align-self-stretch" hidden="hidden">
+              <p><span style="color:red">Constitution de la serre :</span> Votre serre émet <span id="resultsuperificie"
+                  class="affichage-resultat"></span> de CO<sub>2</sub>
+                équivalent par an. </p>
+            </div>
+            
+            <!------------ bloc 14    -->
+            <div id="bloc_14" class="result-full align-self-stretch" hidden="hidden">
+              <p><span style="color:red">Manutention :</span> Votre serre émet <span id="resultmanutention" 
+                class="affichage-resultat"></span> de CO<sub>2</sub> équivalent par an. </p>
+            </div>
+          </div>
+            
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <div class="circle1"></div>
+  <div class="circle2"></div>
+  
+  <a href="../links-icon.html">Référence des icônes</a>
+
+  <script src="scripts/index.js" target="_blank"></script>
+
+</body>
+
+</html>

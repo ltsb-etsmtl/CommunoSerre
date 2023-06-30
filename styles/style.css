@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #26643d;
+    font-weight: 600;
+    font-size: 1.7rem;
+    opacity: 0.8;
+}
+
+
+main{
+    font-family: "Heebo", sans-serif;
+    /* On veut prendre toute la place du moniteur pour le background (100vh)*/
+    min-height: 100vh;
+    background: linear-gradient(to right bottom,rgb(152, 239, 221), rgb(65, 206, 101));
+    display: flex;
+    /* Permet d'aligner verticalement */
+    align-items: center;
+    /* Permet d'aligner horizontalement */
+    justify-content: center;
+}
+
+.glass {
+    background: white;
+    /* Le glass va prendre 80 % de l'écran */
+    min-height: 80vh;
+    width: 70%;
+    background: linear-gradient(
+        to right top, 
+        rgba(255,255,255, 0.8), 
+        rgba(255,255,255, 0.3)
+    );
+    /*Permet de faire les coins ronds du glass*/
+    border-radius: 3rem;
+    /*Plus le z-index est grand, plus le glass va être sur le premier plan (par-dessus les autres objets)*/
+    z-index: 2;
+    /* Crée un effet de blur sur le glass*/
+    backdrop-filter: blur(2rem);
+    display: flex;
+}
+.circle1,.circle2 {
+    background: white;
+    /* Le glass va prendre 80 % de l'écran */
+    background: linear-gradient(
+        to right top, 
+        rgba(255,255,255, 0.8), 
+        rgba(255,255,255, 0.3)
+    );
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle1{
+    top: 35%;
+    right: 5%;
+    background: rgb(222, 238, 166);
+}
+.circle2{
+    top: 5%;
+    left: 5%;
+    background: rgb(222, 238, 166);
+}
+
+.panneau-icones{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(
+        to right top, 
+        rgba(255,255,255, 0.8), 
+        rgba(255,255,255, 0.3)
+    );
+    border-radius: 3rem;
+}
+.container-fluid {
+    flex: 5;
+}
+
+.tabs__tab,
+.resultat-calculs {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+    justify-content: space-evenly;
+    
+}
+
+.resultat-calculs {
+    color: #26643d;
+    font-weight: bold;
+    font-size: 18px;
+    padding-bottom: 40px;
+}
+
+.block-full {
+    color: #26643d;
+    font-size: 0.9rem;
+}
+
+.title-class {
+    /* premier rem pour l'espacement depuis le haut, 2e pour l'espacement à partir de la gauche*/
+    padding: 2rem 3rem;
+}
+
+.block-full input {
+    border-style: dotted;
+    padding: 5px 8px;
+
+}
+
+.block-full p {
+    font-size: 14px;
+    font-weight: 550;
+}
+
+.bloc-input1, 
+.bloc-input-1-2,
+.bloc-input-2,
+.bloc-input-3,
+.bloc-input-4,
+.bloc-input-6,
+.bloc-input-8,
+.bloc-input-10,
+.bloc-input-11,
+.bloc-input-12,
+.bloc-input-13
+ {
+    margin-bottom: 15px;
+}
+
+.bloc-input-1-2 {
+    display: flex;
+    flex-direction : row;
+}
+
+.bloc-input-1-2 p {
+    margin-right: 15px;
+}
+
+.bloc-input-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.bloc-input-8 {
+    display: flex;
+    flex-direction: column;
+}
+
+.affichage-resultat {
+    color: red;
+}
+
